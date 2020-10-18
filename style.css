@@ -9,6 +9,7 @@ input {
 
 #header {
     font-size: 12px;
+    margin: 5px;
     text-align: right;
 }
 
@@ -17,56 +18,58 @@ input {
     text-decoration-line: none;
 }
 
+#inputs {
+    display: grid;
+    grid-template-columns: 30% 10% 10% 10% 10% 30%;
+    grid-template-rows: 150px 15% 5% 5% 35%;
+    grid-gap: 10px;
+}
+
 #logo {
     width: 300px;
-    grid-column: 2;
-    grid-row: 1;
-    left-margin: 20px;
-}
-
-#container{  
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-}
-
-#formContainer{
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 2;
-    display: subgrid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-row-gap: 10px;
+    margin: 10px;
 }
 
-#inputs {
-    grid-column: 2 / 4;
-    grid-row: 3 / 4;
-    display: subgrid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+#subscript{
+    grid-column: 5 / 6;
+    grid-row: 2;
+    color: blue;
+    vertical-align: bottom;
 }
 
 #searchBox{
-    grid-column: 1 / 2;
-    grid-row: 1;
-    width: 450px;
+    grid-column: 2 / 5;
+    grid-row: 3;
+    width: 500px;
     height: 40px;
     border-radius: 20px;
+    text-align: left;
+    padding-left: 50px
+}
+
+#icon {
+    width: 20px;
+    grid-column: 2;
+    grid-row: 3;
+    margin: 15px
 }
 
 #btnI {
-    grid-column: 1;
-    grid-row 2;
+    grid-column: 4;
+    grid-row: 4;
     text-align: left;
-    padding: 10px;
-    margin: 10px;
 }
 
 #btnK {
-    grid-column: 2;
-    grid-row 2;
+    grid-column: 3;
+    grid-row: 4;
     text-align: right;
+}
+
+.go {
     padding: 10px;
-    margin: 10px;
+    background-color: whitesmoke;
+    border: 0;
 }

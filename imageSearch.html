@@ -2,14 +2,18 @@
 <html lang="en">
     <head>
         <title>Image Search</title>
+        <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
-        <a href="advancedSearch.html">google Search</a>
-        <img src="https://www.google.co.uk/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"/>
-        <form action="https://google.com/search">
-            <input type="text" name="q">
-            <input type="submit" name="btnK" value="Google Search">
-            <input type="submit" name="btnI" value="I'm Feeling Lucky">
-            <input type="hidden" name="source" value="hp">
+        <div id="header">
+            <a href="index.html">Google Search</a>
+        </div>
+        <form id="inputs" action="https://google.com/search">
+            <img id="logo" src="https://www.google.co.uk/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"/>
+            <p id="subscript">images</p>
+            <input id="searchBox" type="text" name="q"/>
+            <input type="hidden" name="tbm" value="isch"/>
+            <img id="icon" src="google-search-magnifying-glass-icon.png">
+        </form>
     </body>
 </html>

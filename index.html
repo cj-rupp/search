@@ -9,15 +9,12 @@
             <a href="advancedSearch.html">Advanced Search</a>
             <a href="imageSearch.html">Images</a>
         </div>
-        <div id="container">
-            <div id=formContainer>
+        <form id="inputs" action="https://google.com/search">
             <img id="logo" src="https://www.google.co.uk/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"/>
-            <form id="inputs" action="https://google.com/search">
-                <input id="searchBox" type="text" name="q">
-                <input type="submit" id="btnK" name="btnK" value="Google Search">
-                <input type="submit" id="btnI" name="btnI" value="I'm Feeling Lucky">
-            </form>
-            </div>
-        </div>
+            <input id="searchBox" type="text" name="q"/>
+            <img id="icon" src="google-search-magnifying-glass-icon.png">
+            <input type="submit" id="btnK" class="go" name="btnK" value="Google Search">
+            <input type="submit" id="btnI" class="go" name="btnI" value="I'm Feeling Lucky">
+        </form>
     </body>
 </html>
