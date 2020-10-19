@@ -5,11 +5,30 @@
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
-        <a href="index.html">google Search</a>
-        <form action="https://google.com/search">
-            <input type="text" name="q">
-            <input type="submit" name="btnK" value="Google Search">
-            <input type="submit" name="btnI" value="I'm Feeling Lucky">
+        <div id="a-header" class="header">
+            <img id="a-logo" src="https://www.google.co.uk/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"/>
+            <a href="index.html">Google Search</a>
+        </div>
+        <h2>Advanced Search</h2>
+        <form id="advancedSearch" action="https://google.com/search">
+            <p class="a-left">Find pages with</p><p class="a-right">to do this in the search box</p>
+            <p class="a-left">all these words:</p>
+            <input class="a-mid" type="text" name="q">
+            <p class="a-right">type the important words: <span class="eg">tri-color rat terrier</span></p>
+            <p class="a-left">this exact word of phrase:</p>
+            <input class="a-mid" type="text" name="q">
+            <p class="a-right">put exact word in quotes: <span class="eg">"rat terrier"</span></p>
+            <p class="a-left">any of these words:</p>
+            <input class="a-mid" type="text" name="q">
+            <p class="a-right">type <span class="eg">OR</span> between all the words you want: <span class="eg">miniature OR standard</span></p>
+            <p class="a-left">none of these words:</p>
+            <input class="a-mid" type="text" name="q">
+            <p class="a-right">Put a minus sign just before words that you don't want: <span class="eg">-rodent -"Jack Russell"</span></p>
+            <p class="a-left">numbers ranging form:</p>
+            <input class="a-lc" type="text" name="q"> <p class="a-c">to</p> <input class="a-rc" type="text" name="q">
+            <p class="a-right">Put two full stops between the numbers and add a unit of measurement: <span class="eg">10..35 kg, £300..£500, 2010..2011</span></p>
+
+            <input id="a-go" class="a-rc" type="submit" name="btnK" value="Advanced Search">
             <input type="hidden" name="source" value="hp">
     </body>
 </html>
