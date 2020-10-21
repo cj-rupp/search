@@ -362,7 +362,7 @@
             <p class="a-right">Find pages published in a particular region.</p>
             <p class="a-left">last update:</p>
             <select class="a-mid" name="as_qdr">
-                <option value="" selected>anytime</option>
+                <option value="all" selected>anytime</option>
                 <option value="d">last 24 hours</option>
                 <option value="w">upto a week ago</option>
                 <option value="m">upto a month ago</option>
@@ -370,43 +370,43 @@
             </select>
             <p class="a-right">Find pages updated within the time that you specify.</p>
             <p class="a-left">site or domain:</p>
-            <input class="a-mid" type="text" name="q">
+            <input class="a-mid" type="text" name="as_sitesearch">
             <p class="a-right">Search one site (like <span class="eg">wikipedia.org</span> ) or limit your results to a domain like <span class="eg">.edu, .org</span> or <span class="eg">.gov</span></p>
             <p class="a-left">terms appearing:</p>
-            <select class="a-mid">
-                <option value="anytime" selected>anywhere in the page</option>
-                <option value="anytime">in the title of the page</option>
-                <option value="anytime">in the text of the page</option>
-                <option value="anytime">in the URL of the page</option>
-                <option value="anytime">in the links to the page</option>
+            <select class="a-mid" name="as_occt">
+                <option value="any" selected>anywhere in the page</option>
+                <option value="title">in the title of the page</option>
+                <option value="body">in the text of the page</option>
+                <option value="url">in the URL of the page</option>
+                <option value="links">in the links to the page</option>
             </select>
             <p class="a-right">Search for terms in the whole page, page title or web address, or links to the page you're looking for.</p>
             <p class="a-left">SafeSearch:</p>
-            <select class="a-mid">
-                <option value="anytime" selected>Show explicit results</option>
-                <option value="anytime">Hide explicit results</option>
+            <select class="a-mid" name="safe">
+                <option value="images" selected>Show explicit results</option>
+                <option value="active">Hide explicit results</option>
             </select>
             <p class="a-right">Tell SafeSearch whether to filter sexually explicit content.</p>
             <p class="a-left">file type:</p>
-            <select class="a-mid">
-                <option value="anytime" selected>any format</option>
-                <option value="anytime">Adobe Acrobat PDF (.pdf)</option>
-                <option value="anytime">Adobe Postscript (.ps)</option>
-                <option value="anytime">Autodesk DWF (.dwf)</option>
-                <option value="anytime">Google Earth KML (.kml)</option>
-                <option value="anytime">Google Earth KMZ (.kmz)</option>
-                <option value="anytime">Microsoft Excel (.xls)</option>
-                <option value="anytime">Microsoft Powerpoint (.ppt)</option>
-                <option value="anytime">Microsoft Word (.doc)</option>
-                <option value="anytime">Rich Text Format (.rtf)</option>
-                <option value="anytime">Shockwave Flash (.swf)</option>
+            <select class="a-mid" name="as_filetype">
+                <option value="" selected>any format</option>
+                <option value="pdf">Adobe Acrobat PDF (.pdf)</option>
+                <option value="ps">Adobe Postscript (.ps)</option>
+                <option value="dwf">Autodesk DWF (.dwf)</option>
+                <option value="kml">Google Earth KML (.kml)</option>
+                <option value="kmz">Google Earth KMZ (.kmz)</option>
+                <option value="xls">Microsoft Excel (.xls)</option>
+                <option value="ppt">Microsoft Powerpoint (.ppt)</option>
+                <option value="doc">Microsoft Word (.doc)</option>
+                <option value="rtf">Rich Text Format (.rtf)</option>
+                <option value="swf">Shockwave Flash (.swf)</option>
             </select>
             <p class="a-right">Find pages in the format that you prefer.</p>
             <p class="a-left">usage rights:</p>
-            <select class="a-mid">
-                <option value="anytime" selected>all</option>
-                <option value="anytime">Creative Commons licences</option>
-                <option value="anytime">Commercial and other licenses</option>
+            <select class="a-mid" name="tbs">
+                <option value="" selected>all</option>
+                <option value="sur:cl">Creative Commons licences</option>
+                <option value="sur:ol">Commercial and other licenses</option>
             </select>
             <p class="a-right">Find pages that you are free to use yourself.</p>
             <input id="a-go" class="a-rc" type="submit" name="btnK" value="Advanced Search">
@@ -414,7 +414,7 @@
         </form>
         <hr/>
         <p>You can also...</p>
-        <table>
+        <table id="options">
             <tr>
                 <td><a href="">Find pages that are similar to a URL</a> </td>
             </tr>
@@ -428,5 +428,18 @@
                 <td><a href="">Customise your search settings</a> </td>
             </tr>
         </table>
+        <div class="footer">
+            <hr/>
+            <p>United Kingdom</p>
+            <hr/>
+            <table>
+                <tr>
+                    <td><a href="">Help</a></td>
+                    <td><a href="">Privacy</a></td>
+                    <td><a href="">Terms</a></td>
+                </tr>
+            </table>
+            <hr/>
+        </div>
     </body>
 </html>

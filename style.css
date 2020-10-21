@@ -146,3 +146,24 @@ select {
     width: 130px;
     justify-self: end;
 }
+
+#options {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+#options a {
+    text-decoration: none;
+}
+
+.footer {
+    background-color: lightgray;
+    color: darkslategray;
+    font-size: 14px;
+    padding: 10px;
+    text-align: left;
+}
+.footer a {
+    color: darkslategray;
+    text-decoration: none;
+}
