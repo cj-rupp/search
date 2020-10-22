@@ -156,14 +156,21 @@ select {
     text-decoration: none;
 }
 
+#options a:hover {
+    text-decoration: underline;
+}
+
 .footer {
-    background-color: lightgray;
-    color: darkslategray;
+    background-color: whitesmoke;
+    color: slategray;
     font-size: 14px;
     padding: 10px;
+    margin: 0;
+    border-color: slategray;
+    border-width: 1px;
     text-align: left;
 }
 .footer a {
-    color: darkslategray;
+    color: slategray;
     text-decoration: none;
 }
