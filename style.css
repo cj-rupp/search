@@ -5,6 +5,7 @@ body {
 
 h2 {
     color: red;
+    font-weight: normal;
 }
 
 hr {
@@ -16,6 +17,11 @@ select {
     font-size: 11px;
     font-weight: bold;
 }
+
+#advancedSearch input:focus {
+    border: 1px solid blue;
+}
+
 .header {
     font-size: 12px;
     margin: 5px;
