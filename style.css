@@ -142,14 +142,16 @@ select {
 }
 #a-go{
     background-color: royalblue;
+    font-size: 11px;
+    padding: 3px;
     color: white;
-    width: 130px;
     justify-self: end;
 }
 
 #options {
     font-size: 12px;
     margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 #options a {
@@ -166,11 +168,17 @@ select {
     font-size: 14px;
     padding: 10px;
     margin: 0;
-    border-color: slategray;
+    border-color: lightgray;
     border-width: 1px;
+    border-style: solid;
     text-align: left;
 }
+
 .footer a {
     color: slategray;
     text-decoration: none;
+}
+
+.flinks td {
+    padding: 10px; 
 }
