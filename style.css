@@ -18,10 +18,6 @@ select {
     font-weight: bold;
 }
 
-#advancedSearch input:focus {
-    border: 1px solid blue;
-}
-
 .header {
     font-size: 12px;
     margin: 5px;
@@ -101,45 +97,73 @@ select {
     border: 0;
 }
 
-#advancedSearch {
-    display: grid;
-    grid-template-columns: 12% 23% 10% 23% 32%;
-    grid-template-rows: 1fr repeat(17,5%);
-    grid-row-gap: 10px;
-    font-size: 11px;
+.inputTable {
+    table-layout: fixed;
+    width: 100%;
 }
 
-.a-left {
-    grid-column: 1;
-    margin-left: 15px;
+.inputTable td { 
     font-size: 12px;
+    padding: 5px;
 }
 
-.a-right {
-    grid-column: 5;
-    margin-left: 10px;
+.inputTable p {
+    margin: 0; 
 }
 
-.a-mid {
-    grid-column: 2/5;
+.inputTable th {
+    font-weight: normal;
+    text-align: left;
 }
 
-.a-lc {
-    grid-column: 2;
+
+.inputTable input:focus {
+    border: 1px solid blue;
 }
 
-.a-rc {
-    grid-column: 4;
+
+.m-cell input {
+    width: 100%;
+    height: 25px;
 }
 
-.a-c {
-    grid-column: 3;
+.m-cell select {
+    width: 100%;
+    height: 25px;
+}
+
+.l-col {
+    width: 15%;
+}
+
+.lc-col {
+    width: 22%;
+}
+
+.c-col {
+    width: 5%;
+}
+
+.rc-col {
+    width: 22%;
+}
+
+.r-col {
+    width: 36%;
+}
+
+.r-cell {
+    padding-left: 10px;
+    font-size: 11px;
+    overflow: hidden;
+}
+
+#c-cell {
     text-align: center;
-    vertical-align: middle;
 }
 
-.colHead {
-    font-size: 14px;
+#g-cell {
+    text-align: right;
 }
 
 .eg {
@@ -151,6 +175,7 @@ select {
     font-size: 11px;
     padding: 3px;
     color: white;
+    font-weight: bold;
     justify-self: end;
 }
 
