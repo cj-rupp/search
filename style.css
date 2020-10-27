@@ -37,7 +37,7 @@ select {
 #inputs {
     display: grid;
     grid-template-columns: 30% 10% 10% 10% 10% 30%;
-    grid-template-rows: 150px 15% 5% 5% 1fr;
+    grid-template-rows: 150px 15% 5% 5% 150px;
     grid-gap: 10px;
 }
 
@@ -100,6 +100,7 @@ select {
 .inputTable {
     table-layout: fixed;
     width: 100%;
+    overflow: hidden;
 }
 
 .inputTable td { 
@@ -114,6 +115,7 @@ select {
 .inputTable th {
     font-weight: normal;
     text-align: left;
+    white-space: nowrap;
 }
 
 
@@ -155,7 +157,6 @@ select {
 .r-cell {
     padding-left: 10px;
     font-size: 11px;
-    overflow: hidden;
 }
 
 #c-cell {
@@ -195,9 +196,9 @@ select {
 
 .footer {
     background-color: whitesmoke;
-    color: slategray;
+    color: gray;
     font-size: 14px;
-    padding: 10px;
+    padding: 5px;
     margin: 0;
     border-color: lightgray;
     border-width: 1px;
@@ -206,10 +207,15 @@ select {
 }
 
 .footer a {
-    color: slategray;
+    color:gray;
     text-decoration: none;
 }
 
 .flinks td {
-    padding: 10px; 
+    padding: 10px;
+    white-space: nowrap;
+}
+
+#flinkSpacer {
+    width: 70%;
 }
