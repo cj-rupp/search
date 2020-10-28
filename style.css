@@ -18,6 +18,15 @@ select {
     font-weight: bold;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
 .header {
     font-size: 12px;
     margin: 5px;
@@ -26,7 +35,6 @@ select {
 
 .header a {
     color: black;
-    text-decoration-line: none;
 }
 
 #a-header {
@@ -123,6 +131,10 @@ select {
     border: 1px solid blue;
 }
 
+.inputTable a:visited {
+    text-decoration: none;
+    color: blue;
+}
 
 .m-cell input {
     width: 100%;
@@ -186,13 +198,11 @@ select {
     margin-bottom: 10px;
 }
 
-#options a {
+#options a:visited {
     text-decoration: none;
+    color: blue;
 }
 
-#options a:hover {
-    text-decoration: underline;
-}
 
 .footer {
     background-color: whitesmoke;
