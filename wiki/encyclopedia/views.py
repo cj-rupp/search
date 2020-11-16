@@ -10,6 +10,10 @@ from random import choice
 class SearchForm(forms.Form):
     q = forms.CharField(label="search")
 
+class EditForm(forms.Form):
+    title = forms.CharField(label="save")
+    content = forms.CharField(label="save")
+
 converter = Markdown()
 
 def index(request):
@@ -72,9 +76,34 @@ def search(request):
             })
     else:
         return render(request, "encyclopedia/error.html", {
-            "title": "method"        
+            "title": request.method       
         })
 
+def edit(request,title):
+    return render(request, "encyclopedia/edit.html", {
+        "title": title,
+        "text": util.get_entry(title)
+    })
 
-
+def save(request):
+    if request.method == "POST":
+        form = EditForm(request.POST)
+        if form.is_valid():
+            title = form.cleaned_data["title"]
+            content = form.cleaned_data["content"]
+            util.save_entry(title,content)
+            return render(request, "encyclopedia/page.html", {
+                "title": title,
+                "text": converter.convert(content)
+            })
+        else:
+            return render(request, "encyclopedia/edit.html", {
+                "title": title,
+                "text": form.errors
+            })
+    else:
+        return render(request, "encyclopedia/error.html", {
+            "title": request.method
+        })
+        
 
