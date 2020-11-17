@@ -85,6 +85,9 @@ def edit(request,title):
         "text": util.get_entry(title)
     })
 
+def newPage(request):
+    return render(request, "encyclopedia/blank.html")
+
 def save(request):
     if request.method == "POST":
         form = EditForm(request.POST)
