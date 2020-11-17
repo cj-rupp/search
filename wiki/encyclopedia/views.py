@@ -68,11 +68,12 @@ def search(request):
                     })
                 else:
                     return render(request, "encyclopedia/error.html", {
-                        "title": pattern
+                        "title": pattern,
+                        "error": ""
                     })
         else:
             return render(request, "encyclopedia/error.html", {
-                "title": form.errors
+                "error": form.errors
             })
     else:
         return render(request, "encyclopedia/error.html", {
@@ -100,9 +101,8 @@ def save(request):
                 "text": converter.convert(content)
             })
         else:
-            return render(request, "encyclopedia/edit.html", {
-                "title": title,
-                "text": form.errors
+            return render(request, "encyclopedia/error.html", {
+                "error": form.errors
             })
     else:
         return render(request, "encyclopedia/error.html", {
