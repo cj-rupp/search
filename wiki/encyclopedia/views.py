@@ -11,8 +11,9 @@ class SearchForm(forms.Form):
     q = forms.CharField(label="search")
 
 class EditForm(forms.Form):
-    title = forms.CharField(label="save")
-    content = forms.CharField(label="save")
+    title = forms.CharField(label="Title")
+    content = forms.CharField(label="Definition")
+    status = forms.CharField(label="Status")
 
 converter = Markdown()
 
@@ -83,11 +84,16 @@ def search(request):
 def edit(request,title):
     return render(request, "encyclopedia/edit.html", {
         "title": title,
-        "text": util.get_entry(title)
+        "text": util.get_entry(title),
+        "status": "old"
     })
 
 def newPage(request):
-    return render(request, "encyclopedia/blank.html")
+    return render(request, "encyclopedia/edit.html", {
+        "title": "",
+        "text": "",
+        "status": "new"
+    })
 
 def save(request):
     if request.method == "POST":
@@ -95,11 +101,17 @@ def save(request):
         if form.is_valid():
             title = form.cleaned_data["title"]
             content = form.cleaned_data["content"]
-            util.save_entry(title,content)
-            return render(request, "encyclopedia/page.html", {
-                "title": title,
-                "text": converter.convert(content)
-            })
+            status = form.cleaned_data["status"]
+            if status=="old" or util.get_entry(title) == None:
+                util.save_entry(title,content)
+                return render(request, "encyclopedia/page.html", {
+                    "title": title,
+                    "text": converter.convert(content)
+                })
+            else:
+                return render(request, "encyclopedia/blocked.html", {
+                    "title": title
+                })
         else:
             return render(request, "encyclopedia/error.html", {
                 "error": form.errors
