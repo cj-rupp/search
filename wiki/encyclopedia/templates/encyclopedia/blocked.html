@@ -1,0 +1,11 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Blocked
+{% endblock %}
+
+{% block body %}
+    <h1>Operation Blocked</h1>
+
+    <p>The page <a href="/wiki/{{ title }}">{{title}}</a> already exists on this Wiki!</p>
+{% endblock %}

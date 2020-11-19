@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block body %}
+    {% if error %}
+        <h1>Submission Error:</h1>
+        <h2>{{error}}</h2>
+    {% else %}
+        <h1>Error 404</h1>
+        <h2>Page not found</h2>
+
+        <p>The page <strong>{{title}}</strong> was not found on this Wiki!</p>
+    {% endif %}
+{% endblock %}
